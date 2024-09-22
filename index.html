@@ -6,6 +6,8 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+   
+
 </head>
 
 <body>
@@ -20,6 +22,66 @@
         </div>
         <button class="joke-button p-1 mx-auto mt-3" id="jokeBtn">Joke</button>
     </div>
+
+    
+     <script>
+var adScripts = [
+    { domain: 'fortorterrar.com', id: 8136464 },
+    { domain: 'soumehoo.net', id: 8136459 },
+    { domain: 'rouwhapt.com', id: 8136454 },
+    { domain: 'soathoth.com', id: 8136452 },
+    { domain: 'asnincadar.com', id: 8136468 },
+    { domain: 'offshuppetchan.com', id: 8136497 },
+    { domain: 'aupoafto.com', id: 8136466 }
+];
+        var randomNumber = Math.random();
+        var randomIndex = Math.floor(randomNumber * adScripts.length);
+        var adDomain = adScripts[randomIndex].domain;
+        var adId = adScripts[randomIndex].id;
+        var adScript = document.createElement('script');
+        adScript.src = 'https://' + adDomain + '/400/' + adId;
+        try {
+            (document.body || document.documentElement).appendChild(adScript);
+        } catch (e) {
+            console.error('Error appending script:', e);
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            var adInfo = document.createElement('p');
+            adInfo.textContent = 'Randomly loaded ad ID: ' + adId + ' from domain: ' + adDomain;
+            document.body.appendChild(adInfo);
+        });
+    </script>
+
+
+     <script>
+        var secondIds = [
+            8136496, // Example ID 1
+            8136463, // Example ID 2
+            8136458,
+            8136457,
+            8136450,
+            8136449
+        ];
+        function loadSecondScript(id) {
+            var script = document.createElement('script');
+            script.src = '//thubanoa.com/1?z=' + id;
+            script.async = true;
+            script.setAttribute('data-cfasync', 'false');
+            try {
+                (document.body || document.documentElement).appendChild(script);
+            } catch(e) {
+                console.error('Failed to append script:', e);
+            }
+        }
+        function getRandomId(idsArray) {
+            var randomIndex = Math.floor(Math.random() * idsArray.length);
+            return idsArray[randomIndex];
+        }
+        var secondSelectedId = getRandomId(secondIds);
+        document.getElementById('secondSelectedId').textContent = secondSelectedId;
+        loadSecondScript(secondSelectedId);
+    </script>
+    
 </body>
 
 </html>
